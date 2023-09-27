@@ -1,0 +1,28 @@
+#include<iostream>
+#include<vector>
+int lsearch(int arr[],int n,int val){
+    for(int i=0;i<n;i++){
+        if(arr[i]==val){
+            return i;
+        }
+    }return -1;
+}
+int main(){
+    int n,val;
+    std::cin>>n;
+    std::vector<int> arr(n);
+    for(int i=0;i<n;i++){
+       std::cin>>arr[i];
+    }
+    for(int i=0;i<n;i++){
+     std::cout<<arr[i]<<" "<<std::endl;
+    }
+    std::cin>>val;
+    std::cout<<"Value is:"<<val;
+    int r=lsearch(arr.data(),n,val);
+    if(r==-1){
+        std::cout<<"\nElement is not found"<<std::endl;}
+    else{
+        std::cout<<"\nElement is  found at "<<r<<std::endl;
+    }    
+}
